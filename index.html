@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <title>Hotel Website</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/style.css">
+
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css" integrity="sha512-UTNP5BXLIptsaj5WdKFrkFov94lDx+eBvbKyoe1YAfjeRPC+gT5kyZ10kOHCfNZqEui1sxmqvodNUx3KbuYI/A==" crossorigin="anonymous"
+    referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+  <header class="header" id="navigation-menu">
+    <div class="container">
+      <nav>
+        <a href="#" class="logo"> <img src="image/logo.jpeg" alt=""> </a>
+
+        <ul class="nav-menu">
+          <li> <a href="#home" class="nav-link">Accueil</a> </li>
+          <li> <a href="#about" class="nav-link">À propos</a> </li>
+          <li> <a href="#rooms" class="nav-link">Chambres</a> </li>
+          <li> <a href="#restaurant" class="nav-link">Restaurant</a> </li>
+          <li> <a href="#gallery" class="nav-link">Galerie</a> </li>
+          <li> <a href="#contact" class="nav-link">Contact</a> </li>
+        </ul>
+
+        <div class="hambuger">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+      </nav>
+    </div>
+  </header>
+  <script>
+    const hambuger = document.querySelector('.hambuger');
+    const navMenu = document.querySelector('.nav-menu');
+
+    hambuger.addEventListener("click", mobileMenu);
+
+    function mobileMenu() {
+      hambuger.classList.toggle("active");
+      navMenu.classList.toggle("active");
+    }
+
+    const navLink = document.querySelectorAll('.nav-link');
+    navLink.forEach((n) => n.addEventListener("click", closeMenu));
+
+    function closeMenu() {
+      hambuger.classList.remove("active");
+      navMenu.classList.remove("active");
+    }
+  </script>
+
+  <section class="home" id="home">
+    <div class="head_container">
+      <div class="box">
+        <div class="text">
+          <h1>Salut.Hello.Hola</h1>
+          <p>Nous nous efforçons toujours de fournir les meilleurs services, assurés par un personnel de premier ordre, afin de répondre aux goûts de notre précieuse clientèle. </p>
+        </div>
+      </div>
+      <div class="image">
+        <img src="image/home1.jpg" class="slide">
+      </div>
+    </div>
+  </section>
+  <section class="book">
+    <div class="container flex">
+      <div class="input grid">
+        <div class="box">
+          <label>Arrivée:</label>
+          <input type="date" placeholder="Check-in-Date">
+        </div>
+        <div class="box">
+          <label>Départ:</label>
+          <input type="date" placeholder="Check-out-Date">
+        </div>
+        <div class="box">
+          <label>Adultes:</label> <br>
+          <input type="number" placeholder="0">
+        </div>
+        <div class="box">
+          <label>Enfants:</label> <br>
+          <input type="number" placeholder="0">
+        </div>
+      </div>
+      <div class="search">
+        <input type="submit" value="RECHERCHER">
+      </div>
+    </div>
+  </section>
+  <section class="about top" id="about">
+    <div class="container flex">
+      <div class="left">
+        <div class="img">
+          <img src="image/a1.jpg" alt="" class="image1">
+          <img src="image/a2.jpg" alt="" class="image2">
+        </div>
+      </div>
+      <div class="right">
+        <div class="heading">
+          <h5>ÉLEVER LE CONFORT AU PLUS HAUT NIVEAU</h5>
+          <h2>Bienvenue au Riad Agadir Hotel et Resort</h2>
+          <p>Plongez au cœur de la douceur marocaine au Riad Agadir, un havre de paix alliant charme traditionnel et confort moderne. Laissez-vous séduire par notre hospitalité chaleureuse, notre cuisine raffinée et notre cadre apaisant à deux pas de l'océan. Que vous recherchiez la détente absolue au bord de la piscine ou l'exploration de la région, chaque instant ici est pensé pour vous donner le sourire.  Notre équipe passionnée met tout son savoir-faire en œuvre pour vous faire découvrir les saveurs généreuses du royaume, célébrant le partage et l'hospitalité marocaine à chaque bouchée.  </p>
+          <p>Notre équipe passionnée met également à profit sa vaste expérience pour vous faire découvrir le patrimoine et la riche culture du Royaume, tout en célébrant l'hospitalité marocaine à chaque instant passé en notre compagnie. Réservez votre séjour dès aujourd'hui et vivez une expérience inoubliable sous le soleil d'Agadir !</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="wrapper top">
+    <div class="container">
+      <div class="text">
+        <h2>Nos commodités</h2>
+        <p>Riad Agadir incluent généralement un patio central verdoyant, un hammam traditionnel avec des soins au savon noir, et un restaurant servant des plats régionaux faits maison.Notre hôtel donne également sur le bord de l'eau, vous permettant de pratiquer les différents sports que vous aimez. </p>
+
+        <div class="content">
+          <div class="box flex">
+            <i class="fas fa-swimming-pool"></i>
+            <span>Piscine</span>
+          </div>
+          <div class="box flex">
+            <i class="fas fa-dumbbell"></i>
+            <span>Gym & yogo</span>
+          </div>
+          <div class="box flex">
+            <i class="fas fa-spa"></i>
+            <span>Spa & massage</span>
+          </div>
+          <div class="box flex">
+            <i class="fas fa-ship"></i>
+            <span>Excursions en Bateau</span>
+          </div>
+          <div class="box flex">
+            <i class="fas fa-swimmer"></i>
+            <span>Cours de Surf</span>
+          </div>
+          <div class="box flex">
+            <i class="fas fa-microphone"></i>
+            <span>Salle de Conférence</span>
+          </div>
+          <div class="box flex">
+            <i class="fas fa-water"></i>
+            <span>Plongée</span>
+          </div>
+          <div class="box flex">
+            <i class="fas fa-umbrella-beach"></i>
+            <span>Plage privée</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="room top" id="room">
+    <div class="container">
+      <div class="heading_top flex1">
+        <div class="heading">
+          <h5>CONFORT OPTIMAL</h5>
+          <h2>Chambres $ Suites</h2>
+        </div>
+        <div class="button">
+          <button class="btn1">VOIR TOUT</button>
+        </div>
+      </div>
+
+      <div class="content grid">
+        <div class="box">
+          <div class="img">
+            <img src="image/r1.jpg" alt="">
+          </div>
+          <div class="text">
+            <h3>Chambres Supérieures Soble</h3>
+            <p> <span>$</span>129 <span>/nuit</span> </p>
+          </div>
+        </div>
+        <div class="box">
+          <div class="img">
+            <img src="image/r2.jpg" alt="">
+          </div>
+          <div class="text">
+            <h3>Chambres Supérieures Soble</h3>
+            <p> <span>$</span>129 <span>/nuit</span> </p>
+          </div>
+        </div>
+        <div class="box">
+          <div class="img">
+            <img src="image/r3.jpg" alt="">
+          </div>
+          <div class="text">
+            <h3>Chambres Supérieures Soble</h3>
+            <p> <span>$</span>129 <span>/nuit</span> </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="restaurant top" id="restaurant">
+    <div class="container flex">
+      <div class="left">
+        <img src="image/re.jpg" alt="">
+      </div>
+      <div class="right">
+        <div class="text">
+          <h2>Notre Restaurant</h2>
+          <p> Nous nous efforçons toujours de proposer les meilleurs plats, préparés avec les meilleurs ingrédiants, afin de satisfaire tous les gouts de notre précieuse clientèle.</p>
+        </div>
+        <div class="accordionWrapper">
+          <div class="accordionItem open">
+            <h2 class="accordionIHeading">Cuisine Marocaine</h2>
+            <div class="accordionItemContent">
+              <p>La cuisine marocaine est réputée comme l'une des plus riches et savoureuses au monde. Elle se distingue par un équilibre parfait entre doux et salé, mijotés reconfortants et épices parfumées. Parmi ses spécialités emblématiques figurent le tajine et la pastilla, ainsi que le thé et des pâtisseries telles que les kaab el ghazal.
+              </p>
+            </div>
+          </div>
+          <div class="accordionItem close">
+            <h2 class="accordionIHeading">Cuisine Italienne</h2>
+            <div class="accordionItemContent">
+              <p>La cuisine italienne est une tradition culinaire riche qui repose sur la simplicité. Elle met en valeur des ingrédients phares comme l'huile d'olive, les tomates et les pâtes. Elle se distingue par des plas spéciaux comme la pizza Margherita, les pâtes à la carbonara, le risotto au safran et le célèbre tiramisu
+            </div>
+          </div>
+          <div class="accordionItem close">
+            <h2 class="accordionIHeading">Cuisine Française</h2>
+            <div class="accordionItemContent">
+              <p>La gastronomie française brille à travers des spécialités emblématiques comme le bœuf bourguignon, le coq au vin, le gratin dauphinois et le fameux fondant au chocolat. Ces grands classiques illustrent parfaitement le savoir-faire culinaire et la richesse des terroirs de la France.
+              </p>
+            </div>
+          </div>
+          <div class="accordionItem close">
+            <h2 class="accordionIHeading">Cuisine Japonaise</h2>
+            <div class="accordionItemContent">
+              <p>La cuisine japonaise traditionnelle se distingue par des mets incontournables comme les sushis, les ramens, les tempuras et les brochettes yakitori. Ces spécialités emblématiques reflètent parfaitement le raffinement, la fraîcheur des produits et l'harmonie des saveurs de cette gastronomie.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <script>
+    var accItem = document.getElementsByClassName('accordionItem');
+    var accHD = document.getElementsByClassName('accordionIHeading');
+
+    for (i = 0; i < accHD.length; i++) {
+      accHD[i].addEventListener('click', toggleItem, false);
+    }
+
+    function toggleItem() {
+      var itemClass = this.parentNode.className;
+      for (var i = 0; i < accItem.length; i++) {
+        accItem[i].className = 'accordionItem close';
+      }
+      if (itemClass == 'accordionItem close') {
+        this.parentNode.className = 'accordionItem open';
+      }
+    }
+  </script>
+
+
+
+  <section class="gallary mtop " id="gallary">
+    <div class="container">
+      <div class="heading_top flex1">
+        <div class="heading">
+          <h5>BIENVENUE DANS NOTRE GALERIE PHOTOS</h5>
+          <h2>Galerie Photos De Notre Hôtel</h2>
+        </div>
+      </div>
+
+      <div class="owl-carousel owl-theme">
+        <div class="item">
+          <img src="image/g1.jpg" alt="">
+        </div>
+        <div class="item">
+          <img src="image/g2.jpg" alt="">
+        </div>
+        <div class="item">
+          <img src="image/g3.jpg" alt="">
+        </div>
+        <div class="item">
+          <img src="image/g4.jpg" alt="">
+        </div>
+        <div class="item">
+          <img src="image/g5.jpg" alt="">
+        </div>
+        <div class="item">
+          <img src="image/g6.jpg" alt="">
+        </div>
+        <div class="item">
+          <img src="image/g7.jpg" alt="">
+        </div>
+        <div class="item">
+          <img src="image/g8.jpg" alt="">
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.js" integrity="sha512-gY25nC63ddE0LcLPhxUJGFxa2GoIyA5FLym4UJqHDEMHjp8RET6Zn/SHo1sltt3WuVtqfyxECP38/daUc/WVEA==" crossorigin="anonymous"
+    referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous"
+    referrerpolicy="no-referrer"></script>
+  <script>
+    $('.owl-carousel').owlCarousel({
+      loop: true,
+      margin: 10,
+      nav: true,
+      dots: false,
+      navText: ["<i class='fas fa-chevron-left'></i>", "<i class='fas fa-chevron-right'></i>"],
+      responsive: {
+        0: {
+          items: 1
+        },
+        768: {
+          items: 2
+        },
+        1000: {
+          items: 4
+        }
+      }
+    })
+  </script>
+
+
+
+    <section class="top">
+  <section class="Temoignage" id="Temoignage">
+        <div class="titre blanc">
+                <h2 class="sous-titre">Nos Que Disent Nos <span>C</span>lients</h2>
+                <p class="para">Voici quelques commentaires dites par notre clients</p>
+        </div>
+        <div class="contenu">
+            <div class="box">
+               
+                   <img src="image/client1.jpeg" alt="image">
+              
+               <div class="text">
+                   <P>L'hôtel offre un excellent service et se distingue par un style marocain authentique, mêlant tradition et modernité.
+                    Un décor raffiné et traditionnel (mosaïques, lumières tamisées) qui offre une véritable immersion, parfait pour une soirée intime ou en famille.</p>
+                   <h3>Adnan Tahiri</h3>
+                </div>
+            </div>
+            <div class="box">
+               
+                   <img src="image/client2.jpeg" alt="image">
+              
+               <div class="text">
+                   <p>Un accueil chaleureux et un service aux petits soins, typique de la légendaire hospitalité marocaine. 
+                    Une véritable explosion de saveurs avec des tajines et couscous savoureux qui rappellent la cuisine familiale. Les ingrédients sont frais et les épices parfaitement dosées.</p>
+                   <h3>Rima Zahi</h3>     
+                </div>
+            </div>
+            <div class="box">
+               
+                   <img src="image/client3.jpeg" alt="image">
+              
+               <div class="text">
+                   <p>L'hôtel était paisible et reflétait un charme marocain authentique , les prix étaient très raisonnables compte tenu de la qualité du service, des chambres et des installations bien équipées, ainsi que du restaurant haut de gamme. C'est un excellent choix pour vos vacances au Maroc.</p>
+                    <h3>Franck Leroi</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+    </section>
+
+
+  <footer>
+    <div class="container grid top">
+      <div class="box">
+        <img src="https://img.icons8.com/external-flatart-icons-flat-flatarticons/48/000000/external-hotel-hotel-services-and-city-elements-flatart-icons-flat-flatarticons-1.png" />
+        
+        <p>Notre hôtel propose différents modes de paiement.</p>
+        <div class="payment grid">
+          <img src="https://img.icons8.com/color/48/000000/visa.png" />
+          <img src="https://img.icons8.com/color/48/000000/mastercard.png" />
+          <img src="https://img.icons8.com/color-glass/48/000000/paypal.png" />
+          <img src="https://img.icons8.com/fluency/48/000000/amex.png" />
+        </div>
+      </div>
+
+      <div class="box">
+        <h3>Actualités Récentes</h3>
+
+        <ul>
+          <li>Notre Excursion En Bateau Vers une île secrète Est Faite Pour Vous</li>
+          <li>Détendez-Vous Et Évadez-Vous Dans Nos Abris Naturels </li>
+          <li>September à L'Hôtel Riad Agadir</li>
+          <li>Concerts De musique En Direct à Riad Agadir</li>
+        </ul>
+      </div>
+
+      <div class="box">
+        <h3>Pour les clients</h3>
+        <ul>
+          <li>À propos de Riad Agadir</li>
+          <li>Service Client/Aide</li>
+          <li>Comptes D'entreprise</li>
+          <li>Informations Financières</li>
+          <li>Termes & Conditions</li>
+        </ul>
+      </div>
+
+      <div class="box">
+        <h3>Nous contact</h3>
+
+        <ul>
+          <li>30 Rue Hay Raiad, Agadir 82000</li>
+          <li><i class="far fa-envelope"></i>RiadAgadir@gmail.com </li>
+          <li><i class="far fa-phone-alt"></i>123 456 7898 </li>
+          <li><i class="far fa-phone-alt"></i>123 456 7898 </li>
+          <li><i class="far fa-comments"></i>Service client 24h/24 et 7j/7 </li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>
