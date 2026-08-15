@@ -35,9 +35,18 @@ header {
   height: 8vh;
 }
 
-.logo img {
-  top : 0;
-  width: 140px;
+.logo {
+  color: #fff;
+  font-size: 24px;
+  font-weight: 700;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo span {
+  color: #C1B086;
 }
 
 header nav {
@@ -392,9 +401,16 @@ input {
   grid-template-columns: repeat(3, 1fr);
 }
 
+.room .img {
+  width: 100%;
+  height: 250px; /* Définissez ici la hauteur souhaitée */
+  overflow: hidden;
+}
+
 .room img {
   width: 100%;
   height: 100%;
+  object-fit: cover; /* Remplit l'espace sans déformer l'image */
 }
 
 .room .box {

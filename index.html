@@ -3,6 +3,7 @@
 
 <head>
   <title>Hotel Website</title>
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="css/style.css">
 
@@ -21,7 +22,9 @@
   <header class="header" id="navigation-menu">
     <div class="container">
       <nav>
-        <a href="#" class="logo"> <img src="image/logo.jpeg" alt=""> </a>
+        <a href="index.html" class="logo">
+  <i class="fas fa-hotel"></i> Riad <span>Agadir</span>
+</a>
 
         <ul class="nav-menu">
           <li> <a href="#home" class="nav-link">Accueil</a> </li>
@@ -29,7 +32,7 @@
           <li> <a href="#rooms" class="nav-link">Chambres</a> </li>
           <li> <a href="#restaurant" class="nav-link">Restaurant</a> </li>
           <li> <a href="#gallery" class="nav-link">Galerie</a> </li>
-          <li> <a href="#contact" class="nav-link">Contact</a> </li>
+          <li> <a href="contact.php" class="nav-link">Contact</a> </li>
         </ul>
 
         <div class="hambuger">
@@ -74,30 +77,36 @@
     </div>
   </section>
   <section class="book">
-    <div class="container flex">
+  <div class="container flex">
+    <!-- Formulaire redirigeant vers formulaire.html -->
+    <form action="formulaire.php" method="GET" class="container flex" style="width: 100%;">
+      
       <div class="input grid">
         <div class="box">
-          <label>Arrivée:</label>
-          <input type="date" placeholder="Check-in-Date">
+          <label for="search_checkin">Arrivée:</label>
+          <input type="date" id="search_checkin" name="checkin">
         </div>
         <div class="box">
-          <label>Départ:</label>
-          <input type="date" placeholder="Check-out-Date">
+          <label for="search_checkout">Départ:</label>
+          <input type="date" id="search_checkout" name="checkout">
         </div>
         <div class="box">
-          <label>Adultes:</label> <br>
-          <input type="number" placeholder="0">
+          <label for="search_adults">Adultes:</label> <br>
+          <input type="number" id="search_adults" name="adults" min="1" placeholder="0">
         </div>
         <div class="box">
-          <label>Enfants:</label> <br>
-          <input type="number" placeholder="0">
+          <label for="search_children">Enfants:</label> <br>
+          <input type="number" id="search_children" name="children" min="0" placeholder="0">
         </div>
       </div>
+
       <div class="search">
-        <input type="submit" value="RECHERCHER">
+        <input type="submit" value="RÉSERVER">
       </div>
-    </div>
-  </section>
+
+    </form>
+  </div>
+</section>
   <section class="about top" id="about">
     <div class="container flex">
       <div class="left">
@@ -159,7 +168,7 @@
       </div>
     </div>
   </section>
-  <section class="room top" id="room">
+  <section class="room top" id="rooms">
     <div class="container">
       <div class="heading_top flex1">
         <div class="heading">
@@ -167,7 +176,7 @@
           <h2>Chambres $ Suites</h2>
         </div>
         <div class="button">
-          <button class="btn1">VOIR TOUT</button>
+           <a href="chambres.html"><button  class="btn1">VOIR TOUT</button></a> 
         </div>
       </div>
 
@@ -177,8 +186,8 @@
             <img src="image/r1.jpg" alt="">
           </div>
           <div class="text">
-            <h3>Chambres Supérieures Soble</h3>
-            <p> <span>$</span>129 <span>/nuit</span> </p>
+            <h3>Suite Royale Riad</h3>
+            <p> <span>$</span>250 <span>/nuit</span> </p>
           </div>
         </div>
         <div class="box">
@@ -186,8 +195,8 @@
             <img src="image/r2.jpg" alt="">
           </div>
           <div class="text">
-            <h3>Chambres Supérieures Soble</h3>
-            <p> <span>$</span>129 <span>/nuit</span> </p>
+            <h3>Suite Traditionnelle</h3>
+            <p> <span>$</span>189 <span>/nuit</span> </p>
           </div>
         </div>
         <div class="box">
@@ -195,7 +204,7 @@
             <img src="image/r3.jpg" alt="">
           </div>
           <div class="text">
-            <h3>Chambres Supérieures Soble</h3>
+            <h3>Chambre Supérieure</h3>
             <p> <span>$</span>129 <span>/nuit</span> </p>
           </div>
         </div>
@@ -267,7 +276,7 @@
 
 
 
-  <section class="gallary mtop " id="gallary">
+  <section class="gallary mtop " id="gallery">
     <div class="container">
       <div class="heading_top flex1">
         <div class="heading">
@@ -300,6 +309,15 @@
         </div>
         <div class="item">
           <img src="image/g8.jpg" alt="">
+        </div>
+        <div class="item">
+          <img src="image/g9.jpg" alt="">
+        </div>
+        <div class="item">
+          <img src="image/g10.jpg" alt="">
+        </div>
+        <div class="item">
+          <img src="image/g11.jpg" alt="">
         </div>
       </div>
 
